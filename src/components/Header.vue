@@ -1,15 +1,24 @@
 <template>
   <div class="header">
-    <img src="..\assets\kujira_logo.png" />
-    <div class="bg">
-
-      <ul>
-        <li><router-link to="/">Home</router-link></li>
-        <li><router-link to="/about">About</router-link></li>
-        <li><router-link to="/access">Access</router-link></li>
-        <li><router-link to="/menu">Menu</router-link></li>
-        <li><router-link to="/contact">Contact</router-link></li>
-      </ul>
+    <img src="../assets/kujira_logo.png" />
+    <div class="container">
+      <div class="row bg">
+        <div class="col-12 col-md-auto my-1">
+          <router-link to="/">Home</router-link>
+        </div>
+        <div class="col-12 col-md-auto my-1">
+          <router-link to="/containts">About</router-link>
+        </div>
+        <div class="col-12 col-md-auto my-1">
+          <router-link to="/access">Access</router-link>
+        </div>
+        <div class="col-12 col-md-auto my-1">
+          <router-link to="/menu">Menu</router-link>
+        </div>
+        <div class="col-12 col-md-auto my-1">
+          <router-link to="/contact">Contact</router-link>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -33,7 +42,6 @@ li {
   margin: 0;
   padding: 20px 10px 15px 20px;
   background-repeat: repeat-x;
-  /* background-image: url(..\assets\menu-bg.png); */
-  /* background-image: url(..\..\public\img\menu-bg.png); */
+  background-image: url(../assets/menu-bg.png);
 }
 </style>

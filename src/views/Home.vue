@@ -26,12 +26,13 @@
     <!-- <Header/> -->
 
   </div>
-</template>
+</template> 
 
 <script lang="ts">
 import { defineComponent } from "vue";
 // import HelloWorld from '../components/HelloWorld.vue'; // @ is an alias to /src
 // import Header from '../components/Header.vue'; // @ is an alias to /src
+//ヘッダは100パーセントにする ヘッダとコンテンツのコンテナを分ける cssは使わない routerをネスト構造にしてみる
 
 export default defineComponent({
   name: "Home",

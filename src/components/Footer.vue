@@ -1,7 +1,15 @@
 <template>
   <div class="footer">
-    <img src="..\assets\footer-bg.png" />
-    <p>&copy;Copyright KUJIRA Cafe, All rights reserved.</p>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-auto mx-auto">
+          <img src="..\assets\footer-bg.png" class="img-fluid" />
+        </div>
+        <div class="col-12 col-md-auto mx-auto">
+          <p>&copy;Copyright KUJIRA Cafe, All rights reserved.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -10,15 +18,3 @@ export default {
   name: "Footer",
 };
 </script>
-
-<style scoped>
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-</style>
