@@ -3,12 +3,12 @@
     <div class="container ">
       <div class="row justify-content-center ">
         <div class="col-auto col-md-12 ">
-        <img alt="Vue logo" src="../assets/keyvisual.jpg" class="img-fluid" />
+        <img alt="cafe logo" src="../assets/keyvisual.jpg" class="img-fluid d-block mx-auto" />
         </div>
-        <div class="col-auto col-md-8 ">
-        <h1 class="textcontent">News</h1>
+        <div class="col-auto col-md-12 ">
+        <h1 class="textcontent" id="news">News</h1>
         </div>
-        <div class="col-auto col-md-8 ">
+        <div class="col-auto col-md-12 ">
           <p class="textcontent">
           4月29日（土）は、九寺楽町の春祭りに出店するため、お店は休業させていたただきます。春祭りでタルトやキッシュ、コーヒーも販売するので、ぜひお越しください。
           3月20日（月・祝）は、18時からアコースティックギターデュオ「<a
