@@ -1,5 +1,5 @@
 <template>
-  <div id="nav" class="text-center container">
+  <div id="nav" class="container">
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <Header></Header>
     <!-- <Member></Member>

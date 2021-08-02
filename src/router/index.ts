@@ -53,6 +53,14 @@ const routes: Array<RouteRecordRaw> = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "views" */ '../views/Access.vue')
   },
+  {
+    path: '/Menu',
+    name: 'menu',
+    // route level code-splitting
+    // this generates a separate chunk (views.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "views" */ '../views/Menu.vue')
+  },
 
 ]
 

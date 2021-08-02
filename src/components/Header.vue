@@ -1,13 +1,19 @@
 <template>
   <div class="header">
-    <img src="../assets/kujira_logo.png" />
+    <div class="container">
+      <div class="row">
+        <div class="col-12 my-4 text-center">
+          <img src="../assets/kujira_logo.png" class="img-fluid" />
+        </div>
+      </div>
+    </div>
     <div class="container">
       <div class="row bg">
         <div class="col-12 col-md-auto my-1">
           <router-link to="/">Home</router-link>
         </div>
         <div class="col-12 col-md-auto my-1">
-          <router-link to="/containts">About</router-link>
+          <router-link to="/about">About</router-link>
         </div>
         <div class="col-12 col-md-auto my-1">
           <router-link to="/access">Access</router-link>
@@ -30,14 +36,6 @@ export default {
 </script>
 
 <style scoped>
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
 .bg {
   margin: 0;
   padding: 20px 10px 15px 20px;

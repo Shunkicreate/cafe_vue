@@ -43,16 +43,3 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss">
-h1 {
-  color: #3f5170;
-  margin: 20px;
-  border-bottom: 3px dotted #3f5170;
-}
-// .row{
-//   text-align: center;
-// }
-.textcontent{
-  text-align: left;
-}
-</style>
