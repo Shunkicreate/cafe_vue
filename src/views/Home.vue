@@ -10,6 +10,7 @@
         </div>
         <div class="col-auto col-md-12 ">
           <p class="textcontent">
+          {{test.testValue}}
           4月29日（土）は、九寺楽町の春祭りに出店するため、お店は休業させていたただきます。春祭りでタルトやキッシュ、コーヒーも販売するので、ぜひお越しください。
           3月20日（月・祝）は、18時からアコースティックギターデュオ「<a
             href="https://www.sbcr.jp"
@@ -21,7 +22,7 @@
         </div>
       </div>
     </div>
-    
+    <button @click="changeTest">ボタン</button>
     <!-- <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/> -->
     <!-- <Header/> -->
 
@@ -29,7 +30,7 @@
 </template> 
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, ref, reactive } from "vue";
 // import HelloWorld from '../components/HelloWorld.vue'; // @ is an alias to /src
 // import Header from '../components/Header.vue'; // @ is an alias to /src
 //ヘッダは100パーセントにする ヘッダとコンテンツのコンテナを分ける cssは使わない routerをネスト構造にしてみる
@@ -40,6 +41,17 @@ export default defineComponent({
     // HelloWorld,
     // Header
   },
+  setup(){
+
+    const test = reactive({testValue :"テストだよ"}) // state
+    const changeTest = () => {
+      test.testValue = "ボタンが押されました"
+    } // action
+    return {
+      test,
+      changeTest
+    }
+  }
 });
 </script>
 

@@ -10,19 +10,27 @@ const routes: Array<RouteRecordRaw> = [
     component: Home
   },
   {
-    path: '/containts',
-    name: 'Containts',
-    component: () => import(/* webpackChunkName: "containts" */ '../components/Containts.vue'),
+    path: '/contents',
+    component: () => import(/* webpackChunkName: "containts" */ '../components/contents.vue'),
     children: [
       {
         // /user/:id/profile がマッチした時に
         // UserProfile は User の <router-view> 内部で描画されます
-        path: 'about',
-        name: 'About',
+        path: '',
         // route level code-splitting
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
-        component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+        component:  Home
+        // component:User
+      },
+      {
+        // /user/:id/profile がマッチした時に
+        // UserProfile は User の <router-view> 内部で描画されます
+        path: 'about',
+        // route level code-splitting
+        // this generates a separate chunk (about.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component:  () => import(/* webpackChunkName: "views" */ '../views/About.vue')
         // component:User
       },
       {
@@ -54,12 +62,28 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import(/* webpackChunkName: "views" */ '../views/Access.vue')
   },
   {
-    path: '/Menu',
-    name: 'menu',
+    path: '/menu',
+    name: 'Menu',
     // route level code-splitting
     // this generates a separate chunk (views.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "views" */ '../views/Menu.vue')
+  },
+  {
+    path: '/contact',
+    name: 'Contact',
+    // route level code-splitting
+    // this generates a separate chunk (views.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "views" */ '../views/Contact.vue')
+  },
+  {
+    path: '/result',
+    name: 'Result',
+    // route level code-splitting
+    // this generates a separate chunk (views.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "views" */ '../views/Result.vue')
   },
 
 ]

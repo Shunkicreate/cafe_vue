@@ -8,11 +8,17 @@
 
 <script>
 export default {
-  data() {
+  setup(){
     return {
       firstName: "Taro",
       lastName: "Tokyo"
-    };
-  }
+    }
+  },
+  // data() {
+  //   return {
+  //     firstName: "Taro",
+  //     lastName: "Tokyo"
+  //   };
+  // }
 };
 </script>
