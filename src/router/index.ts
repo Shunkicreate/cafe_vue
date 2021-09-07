@@ -20,7 +20,7 @@ const routes: Array<RouteRecordRaw> = [
         // route level code-splitting
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
-        component:  Home
+        component: Home
         // component:User
       },
       {
@@ -30,62 +30,38 @@ const routes: Array<RouteRecordRaw> = [
         // route level code-splitting
         // this generates a separate chunk (about.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
-        component:  () => import(/* webpackChunkName: "views" */ '../views/About.vue')
+        component: () => import(/* webpackChunkName: "views" */ '../views/About.vue')
         // component:User
       },
       {
         // /user/:id/posts がマッチした時に
         // UserPosts は User の <router-view> 内部で描画されます
         path: 'access',
-        name: 'Access',
         // route level code-splitting
         // this generates a separate chunk (views.[hash].js) for this route
         // which is lazy-loaded when the route is visited.
         component: () => import(/* webpackChunkName: "views" */ '../views/Access.vue')
+      },
+      {
+        // /user/:id/posts がマッチした時に
+        // UserPosts は User の <router-view> 内部で描画されます
+        path: 'menu',
+        // route level code-splitting
+        // this generates a separate chunk (views.[hash].js) for this route
+        // which is lazy-loaded when the route is visited.
+        component: () => import(/* webpackChunkName: "views" */ '../views/Menu.vue')
+      },
+      {
+        path: 'contact',
+        component: () => import(/* webpackChunkName: "views" */ '../views/Contact.vue')
+      },
+      {
+        path: 'contact/result',
+        component: () => import(/* webpackChunkName: "views" */ '../views/Result.vue')
       }
     ]
   },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  },
-  {
-    path: '/access',
-    name: 'Access',
-    // route level code-splitting
-    // this generates a separate chunk (views.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "views" */ '../views/Access.vue')
-  },
-  {
-    path: '/menu',
-    name: 'Menu',
-    // route level code-splitting
-    // this generates a separate chunk (views.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "views" */ '../views/Menu.vue')
-  },
-  {
-    path: '/contact',
-    name: 'Contact',
-    // route level code-splitting
-    // this generates a separate chunk (views.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "views" */ '../views/Contact.vue')
-  },
-  {
-    path: '/result',
-    name: 'Result',
-    // route level code-splitting
-    // this generates a separate chunk (views.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "views" */ '../views/Result.vue')
-  },
-
+ 
 ]
 
 const router = createRouter({

@@ -13,16 +13,16 @@
           <router-link to="/">Home</router-link>
         </div>
         <div class="col-12 col-md-auto my-1">
-          <router-link to="/about">About</router-link>
+          <router-link to="/contents/about">About</router-link>
         </div>
         <div class="col-12 col-md-auto my-1">
-          <router-link to="/access">Access</router-link>
+          <router-link to="/contents/access">Access</router-link>
         </div>
         <div class="col-12 col-md-auto my-1">
-          <router-link to="/menu">Menu</router-link>
+          <router-link to="/contents/menu">Menu</router-link>
         </div>
         <div class="col-12 col-md-auto my-1">
-          <router-link to="/contact">Contact</router-link>
+          <router-link to="/contents/contact">Contact</router-link>
         </div>
       </div>
     </div>

@@ -112,12 +112,7 @@
 <script>
 export default {
   name: "About",
-  componets: {
-    // Headers,
-  },
-  // data() {
-  //   return { menu: "access" }
-  // },
+
   setup(){
     return {
       menu: "access"

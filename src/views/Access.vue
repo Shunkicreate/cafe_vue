@@ -27,8 +27,6 @@
       </div>
     </div>
 
-    <!-- <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/> -->
-    <!-- <Header/> -->
   </div>
 </template> 
 

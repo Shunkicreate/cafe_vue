@@ -14,11 +14,6 @@ export default {
       lastName: "Tokyo"
     }
   },
-  // data() {
-  //   return {
-  //     firstName: "Taro",
-  //     lastName: "Tokyo"
-  //   };
-  // }
+
 };
 </script>

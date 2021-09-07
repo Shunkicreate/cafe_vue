@@ -7,11 +7,25 @@
           <th>name属性</th>
           <th>入力された内容</th>
         </tr>
+        <tr>
+          <th>お問い合わせの種類</th>
+          <th>{{kind}}</th>
+        </tr>
+        <tr>
+          <th>ご来店経験の有無</th>
+          <th>{{experience}}</th>
+        </tr>
+        <tr>
+          <th>ご来店の経緯</th>
+          <th>{{acquaintance}}</th>
+        </tr>
+        <tr>
+          <th>お問い合わせの内容</th>
+          <th>{{contents}}</th>
+        </tr>
       </tbody>
     </table>
-    <p><router-link to="/contact"
-                    >←お問い合わせフォームに戻る</router-link
-                  ></p>
+    <p><router-link to="/contents/contact">←お問い合わせフォームに戻る</router-link></p>
 
   </div>
 </template> 
@@ -19,31 +33,29 @@
 <script lang="ts">
 "use strict";
 
-import { defineComponent } from "vue";
+import { defineComponent, inject, Ref } from "vue";
+import "./Contact.vue";
 
 export default defineComponent({
   name: "Result",
+  setup() {
+
+
+    const kind = inject<Ref<string>>("kind");
+    const experience = inject<Ref<string>>("experience");
+    const acquaintance = inject<Ref<never[]>>("acquaintance");
+    const contents = inject<Ref<string>>("contents");
+
+
+    return {
+      kind,
+      experience,
+      acquaintance,
+      contents,
+
+    };
+  },
 });
-	// window.addEventListener('DOMContentLoaded', function(){
-	// 	var params = decodeURI(location.search);
-	// 	params = params.substring(1);
-	// 	var paramArray = [];
-	// 	paramArray = params.split("&");
-	// 	var tableContent = "";
-	// 	paramArray.forEach(function(item, index){
-	// 		var keyValue = [];
-	// 		keyValue = item.split("=");
-	// 		var tr = document.createElement("tr");
-	// 		var tdName = document.createElement("td");
-	// 		tdName.textContent = keyValue[0];
-	// 		var tdValue = document.createElement("td");
-	// 		tdValue.textContent = keyValue[1];
-	// 		tr.appendChild(tdName);
-	// 		tr.appendChild(tdValue);
-	// 		var ea = document.getElementById("test");
-	// 		ea.appendChild(tr);
-	// 	});
-	// });
 </script>
 
 <style scoped>
